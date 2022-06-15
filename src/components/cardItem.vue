@@ -10,9 +10,9 @@
     </div>
     <div class="effect">{{ cardInfo.effect }}</div>
     <div class="number-box">
-      <div class="number">{{ cardInfo.attack }}</div>
+      <div class="number" v-if="cardInfo.attack">{{ cardInfo.attack }}</div>
       <div class="category"><span :class="{'quality-yell': cardInfo.quality == '天', 'quality-blue': cardInfo.quality == '地', 'quality-white': cardInfo.quality == '凡'}">{{ cardInfo.category }}</span></div>
-      <div class="number">{{ cardInfo.health }}</div>
+      <div class="number" v-if="cardInfo.health">{{ cardInfo.health }}</div>
     </div>
   </div>
 </template>
@@ -90,6 +90,7 @@ export default {
     border-radius: 9px;
   }
   .category{
+    margin: 0 auto;
     width: 160px;
     text-align: center;
     font-size: 12px;
