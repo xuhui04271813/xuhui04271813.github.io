@@ -4,7 +4,7 @@
       <cardItem v-for="(item, index) in currPageCardList" :key="index" :card-info="item"/>
     </div>
     <el-pagination background layout="prev, pager, next, sizes" :total="CardList.length" class="page-class" :page-sizes="pageSizeList"
-      @size-change="pageSizeChange()" @current-change="pageIndexChange()"
+      @size-change="pageSizeChange" @current-change="pageIndexChange"
     ></el-pagination>
   </div>
 </template>
@@ -34,8 +34,8 @@ export default {
     getCurrPageCardList (){
       this.currPageCardList = []
       const start = (this.pageIndex - 1) * this.pageSize;
-      this.currPageCardList = this.CardList.splice(start, this.pageSize);
-      console.log(this.CardList.slice(start, this.pageSize))
+      const end = this.pageIndex * this.pageSize;
+      this.currPageCardList = this.CardList.slice(start, end);
     },
     pageSizeChange(pageSize){
       this.pageSize = pageSize
