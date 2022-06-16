@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <div class="cardBox">
-      <cardItem v-for="(item, index) in CardList" :key="index" :card-info="item"/>
+      <cardItem v-for="(item, index) in currPageCardList" :key="index" :card-info="item"/>
     </div>
-    <el-pagination background layout="prev, pager, next, sizes" :total="CardList.length" class="page-class" :page-sizes="pageSize"></el-pagination>
+    <el-pagination background layout="prev, pager, next, sizes" :total="CardList.length" class="page-class" :page-sizes="pageSizeList"
+      @size-change="pageSizeChange()" @current-change="pageIndexChange()"
+    ></el-pagination>
   </div>
 </template>
 
@@ -13,19 +15,35 @@ import { CardList } from "./js/cardListInfo";
 
 export default {
   name: 'App',
+  mounted() {
+    this.getCurrPageCardList()
+  },
   data() {
     return {
       CardList,
+      pageIndex: 1,
+      pageSize: 20,
       currPageCardList: [],
-      pageSize: [20, 40, 60, 80, 100]
+      pageSizeList: [20, 40, 60, 80, 100]
     }
   },
   components: {
     cardItem
   },
   methods: {
-    getCurrPageCardList(pageIndex, pageSize){
+    getCurrPageCardList (){
       this.currPageCardList = []
+      const start = (this.pageIndex - 1) * this.pageSize;
+      this.currPageCardList = this.CardList.splice(start, this.pageSize);
+      console.log(this.CardList.slice(start, this.pageSize))
+    },
+    pageSizeChange(pageSize){
+      this.pageSize = pageSize
+      this.getCurrPageCardList ()
+    },
+    pageIndexChange(pageIndex){
+      this.pageIndex = pageIndex
+      this.getCurrPageCardList ()
     }
   },
 }
