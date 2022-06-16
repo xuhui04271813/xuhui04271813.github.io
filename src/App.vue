@@ -42,5 +42,6 @@ export default {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 </style>
