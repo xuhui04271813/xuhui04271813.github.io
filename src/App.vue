@@ -3,6 +3,7 @@
     <div class="cardBox">
       <cardItem v-for="(item, index) in CardList" :key="index" :card-info="item"/>
     </div>
+    <el-pagination background layout="prev, pager, next, sizes" :total="CardList.length" class="page-class" :page-sizes="pageSize"></el-pagination>
   </div>
 </template>
 
@@ -15,11 +16,18 @@ export default {
   data() {
     return {
       CardList,
+      currPageCardList: [],
+      pageSize: [20, 40, 60, 80, 100]
     }
   },
   components: {
     cardItem
-  }
+  },
+  methods: {
+    getCurrPageCardList(pageIndex, pageSize){
+      this.currPageCardList = []
+    }
+  },
 }
 </script>
 
@@ -34,7 +42,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    padding-bottom: 40px;
   }
   .cardBox{
     width: 1200px;
@@ -43,5 +51,8 @@ export default {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .page-class{
+    margin: 20 auto;
   }
 </style>
