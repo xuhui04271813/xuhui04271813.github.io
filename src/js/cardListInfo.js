@@ -597,7 +597,7 @@ const CardList = [
         name: '碾压',
         attr: 2,
         cost: 1,
-        imgUrl: require('../assets/cardImg/diecui.png'),
+        imgUrl: require('../assets/cardImg/nianya.png'),
         effect: '使所有己方生灵攻击+1，并获得透骨，直到回合结束',
         attack: '',
         health: '',
