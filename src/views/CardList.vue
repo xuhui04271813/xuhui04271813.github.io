@@ -22,7 +22,7 @@
       <cardItem v-for="(item, index) in currPageCardList" :key="index" :card-info="item"/>
     </div>
 
-    <el-pagination background layout="prev, pager, next, sizes" :total="searchedCardList.length" class="page-class" :page-sizes="pageSizeList"
+    <el-pagination background layout="prev, pager, next, sizes, jumper" :total="searchedCardList.length" class="page-class" :page-sizes="pageSizeList"
       @size-change="pageSizeChange" @current-change="pageIndexChange"
     ></el-pagination>
   </div>

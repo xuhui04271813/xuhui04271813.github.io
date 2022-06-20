@@ -6,7 +6,7 @@
       <div class="name">{{ cardInfo.name }}</div>
     </div>
     <div class="body-box">
-      <img :src="cardInfo.imgUrl">
+      <el-image class="img" :src="cardInfo.imgUrl" lazy></el-image>
     </div>
     <div class="effect">{{ cardInfo.effect }}</div>
     <div class="number-box">
@@ -68,7 +68,7 @@ export default {
     height: 180px;
     width: 200px;
   }
-  img{
+  .img{
     height: 180px;
     width: 200px;
   }
