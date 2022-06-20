@@ -8,6 +8,18 @@
             <div>{{ item.content }}</div>
           </el-collapse-item>
         </el-collapse>
+
+        <el-collapse v-model="activeNamesMid" class="collapseBoxMid">
+          <el-collapse-item v-for="(item, index) in leftEntryMid" :key="index" :title="item.title" :name="index+1">
+            <div>{{ item.content }}</div>
+          </el-collapse-item>
+        </el-collapse>
+
+        <el-collapse v-model="activeNamesRight" class="collapseBoxRight">
+          <el-collapse-item v-for="(item, index) in rightEntryMid" :key="index" :title="item.title" :name="index+1">
+            <div>{{ item.content }}</div>
+          </el-collapse-item>
+        </el-collapse>
       </div>
     </div>
   </div>
@@ -19,6 +31,8 @@ export default {
   data() {
     return {
       activeNamesLeft: [],
+      activeNamesMid: [],
+      activeNamesRight: [],
       leftEntryList: [
         {
           title: '胜利手段',
@@ -69,8 +83,88 @@ export default {
           content: '生灵牌或者装备牌需要消耗法力（哪怕消耗法力为0）才能生效的效果；其他生灵装备卡的效果会在条件达成时自动生效；',
         },
         {
+          title: '游戏中除外',
+          content: '该局游戏中被从游戏中除外的卡无法通过任何手段取回。被除外的卡无法触发死亡效果，但会触发离场效果。',
+        },
+        {
+          title: '拥有者和使用者',
+          content: '拥有者：该卡牌最初存在于谁的牌库中，该卡牌即被谁所拥有。使用者：该卡牌当前被谁所使用。该卡牌即被谁所使用。',
+        }
+      ],
+      leftEntryMid: [
+        {
+          title: '借力',
+          content: '拥有此词条的生灵只有在上一张打出的卡为生灵卡时才能效果生效。',
+        },
+        {
+          title: '借法',
+          content: '拥有此词条的生灵只有在上一张打出的卡为法术或者装备卡时才能效果生效。',
+        },
+        {
+          title: '延迟',
+          content: '拥有此效果的生灵只能在进场回合之后的回合发动效果。',
+        },
+        {
+          title: '沉睡',
+          content: '被沉睡的生灵无法进行攻击也无法释放主动技能，不属于主动技能的技能都可以使用。',
+        },
+        {
+          title: '反弹',
+          content: '当生灵攻击带有反弹效果的生灵时，该生灵会受到他造成伤害的同等非攻击伤害。',
+        },
+        {
+          title: '群攻',
+          content: '拥有此效果的生灵在发动一轮攻击时不仅会对对峙生灵或敌方主角发动一次攻击，还会攻击敌方场上所有生灵。',
+        },
+        {
+          title: '封印',
+          content: '被封印的生灵不会受到任何负面效果（如沉睡，美女蛇等的加伤）的影响，但自身也不能享受任何正面效果（加攻，还击，反弹等）。被封印时进场效果可以正常使用，但是离场和死亡效果无法生效。',
+        },
+        {
+          title: '穿透',
+          content: '拥有此效果的生灵会直接攻击敌方主角（无论有没有对峙生灵）。',
+        },
+        {
+          title: '透骨',
+          content: '拥有此效果的生灵在每对敌方生灵造成一次伤害时，都会对敌方主角造成该生灵减去被攻击生灵的攻击力的非攻击伤害（最少为零）。',
+        },
+        {
+          title: '攻击次数',
+          content: '拥有多次攻击次数的生灵会在每轮的攻击时进行相应次数的攻击。',
+        },
+        {
+          title: '回手',
+          content: '被回手（会触发离场效果）的非衍生牌会回到它的拥有者（无论当前使用者是谁）的手牌中，衍生牌被从场上回手时会直接从游戏中除外。',
+        },
+        {
+          title: '衍生',
+          content: '带有衍生标识的卡表示该卡没有拥有者。在场上的衍生卡被回手时会被从游戏中除外，联锁区中的衍生卡被回手时会回到使用者的手牌中。',
+        },
+        {
           title: '速攻',
-          content: '生灵牌进场的己方回合在回合结束时就可以进行一轮攻击。',
+          content: '拥有此效果的生灵在进场的当前回合即可发动攻击。',
+        },
+        {
+          title: '还击',
+          content: '拥有此效果的生灵在被生灵攻击时，会向攻击他的生灵发动一轮攻击。',
+        },
+      ],
+      rightEntryMid: [
+        {
+          title: '牺牲',
+          content: '拥有此效果的生灵在发动效果时会消灭自己。',
+        },
+        {
+          title: '激怒',
+          content: '拥有此效果的生灵在己方主角受到非攻击伤害时才会触发效果',
+        },
+        {
+          title: '吸血',
+          content: '拥有此效果的生灵在攻击时，自身会回复造成伤害的血量。',
+        },
+        {
+          title: '变化',
+          content: '拥有此效果的生灵效果生效时会变为衍生的选中生灵，碧波潭门派变化的生灵不触发原先生灵的死亡效果，也不触发变化之后生灵的进场效果。',
         },
       ]
     }
@@ -90,8 +184,20 @@ export default {
   justify-content: space-between;
   padding-bottom: 20px 0px;
 }
+.collapseBox{
+  display: flex;
+  justify-content: space-between;
+}
 .collapseBoxLeft{
   width: 380px;
+}
+.collapseBoxMid{
+  width: 380px;
+  margin-left: 30px;
+}
+.collapseBoxRight{
+  width: 380px;
+  margin-left: 30px;
 }
 .button{
   margin: 0px auto;
