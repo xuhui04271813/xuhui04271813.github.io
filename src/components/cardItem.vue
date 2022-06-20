@@ -77,6 +77,7 @@ export default {
     border-top: 2px solid #606266;
     padding: 5px 10px;
     font-size: 12px;
+    color: white;
   }
   .number-box{
     display: flex;

@@ -2993,7 +2993,7 @@ const CardList = [
     },
     {
         name: '云霄娘娘',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/yunxiaoniangniang.png'),
         effect: '3，延迟：抽一张牌，回手',
@@ -3004,7 +3004,7 @@ const CardList = [
     },
     {
         name: '哪吒',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/neza.png'),
         effect: '进场时：与一个己方生灵换位；？，延迟：与对峙生灵一起回手（需支付其费用）',
@@ -3015,7 +3015,7 @@ const CardList = [
     },
     {
         name: '巡海夜叉',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/xunhaiyecha.png'),
         effect: '1：为己方牌库顶的3张牌排序',
@@ -3026,7 +3026,7 @@ const CardList = [
     },
     {
         name: '鲤鱼精',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/liyujing.png'),
         effect: '地方生灵进场时：该生灵的生命-9，本生灵的生命-5',
@@ -3037,7 +3037,7 @@ const CardList = [
     },
     {
         name: '洛神',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/luoshen.png'),
         effect: '地方生灵进场时：该生灵的生命-3',
@@ -3048,7 +3048,7 @@ const CardList = [
     },
     {
         name: '修身道人',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/xiushendaoren.png'),
         effect: '进场时：地方修为每比己方高2点，己方就装备一个风火蒲团',
@@ -3059,7 +3059,7 @@ const CardList = [
     },
     {
         name: '寿星',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/shouxing.png'),
         effect: '替己方主角承受地方造成的非攻击伤害',
@@ -3070,7 +3070,7 @@ const CardList = [
     },
     {
         name: '虾将',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/xiajiang.png'),
         effect: '1：使对峙生灵与另一个地方生灵换位',
@@ -3081,7 +3081,7 @@ const CardList = [
     },
     {
         name: '犬目仙童',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/quanmuxiantong.png'),
         effect: '进场时：查看己方牌库顶的牌，若是生灵牌，则将其消灭，否则放入手牌',
@@ -3092,7 +3092,7 @@ const CardList = [
     },
     {
         name: '崂山道士',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/laoshandaoshi.png'),
         effect: '地方打出有进场能力的生灵牌时：己方法力+2',
@@ -3103,7 +3103,7 @@ const CardList = [
     },
     {
         name: '孟姜女',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/mengjiangnv.png'),
         effect: '进场时：使一个费用小于或等于3的地方生灵变为衍生状态',
@@ -3114,7 +3114,7 @@ const CardList = [
     },
     {
         name: '珊瑚镜',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/shanhujing.png'),
         effect: '0：使一个生灵不能被选为目标，直到地方回合结束',
@@ -3125,7 +3125,7 @@ const CardList = [
     },
     {
         name: '丑道士',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/choudaoshi.png'),
         effect: '1：从敌方废牌堆中选择1张牌洗入己方牌库',
@@ -3136,7 +3136,7 @@ const CardList = [
     },
     {
         name: '鬼谷子',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/guiguzi.png'),
         effect: '0：将一张手牌洗入牌库，随机牌库中的一张牌放入手牌',
@@ -3147,7 +3147,7 @@ const CardList = [
     },
     {
         name: '真武龟将军',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/zhenwuguijiangjun.png'),
         effect: '进场时：若对峙生灵的费用<=2，则使对峙生灵回手',
@@ -3158,7 +3158,7 @@ const CardList = [
     },
     {
         name: '碧霄娘娘',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/bixiaoniangniang.png'),
         effect: '穿透；己方手牌数量大于或等于地方时，不能被选为目标',
@@ -3169,7 +3169,7 @@ const CardList = [
     },
     {
         name: '福星',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/fuxing.png'),
         effect: '进场时：随机复制地方手牌中的1张非衍生法术牌到己方手牌',
@@ -3180,7 +3180,7 @@ const CardList = [
     },
     {
         name: '长孙无忌',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/zhangsunwuji.png'),
         effect: '1：弃一张灵玉：抽一张牌且本回合结束时，己方法力+2',
@@ -3191,7 +3191,7 @@ const CardList = [
     },
     {
         name: '蛰龙',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/chilong.png'),
         effect: '进场时：借力：祈求一张法术牌',
@@ -3202,7 +3202,7 @@ const CardList = [
     },
     {
         name: '魁星',
-        attr: 2,
+        attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/kuixing.png'),
         effect: '回合结束时：若己方有多余法力，就向牌库中洗入一张【因缘·智】',
