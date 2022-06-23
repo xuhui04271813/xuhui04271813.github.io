@@ -3,6 +3,8 @@
     <div class="searchBox">
       <el-input v-model="searchQuery.kewWord" placeholder="请输入卡牌名称关键字" @change="searchCardList" class="select-class"></el-input>
 
+      <el-input v-model="searchQuery.category" placeholder="请输入卡牌类别关键字" @change="searchCardList" class="select-class"></el-input>
+
       <el-select v-model="searchQuery.attr" placeholder="请选择卡牌五行属性" @change="searchCardList" class="select-class" clearable>
         <el-option v-for="item in CardAttr" :key="item.value" :label="item.name" :value="item.value"></el-option>
       </el-select>
@@ -23,7 +25,7 @@
     </div>
 
     <el-pagination background layout="prev, pager, next, sizes, jumper" :total="searchedCardList.length" class="page-class" :page-sizes="pageSizeList"
-      @size-change="pageSizeChange" @current-change="pageIndexChange"
+      @size-change="pageSizeChange" @current-change="pageIndexChange" :current-page="pageIndex"
     ></el-pagination>
   </div>
 </template>
@@ -56,7 +58,8 @@ export default {
         kewWord: '',
         attr: '',
         cost: '',
-        quality: ''
+        quality: '',
+        category: ''
       }
     }
   },
@@ -117,6 +120,15 @@ export default {
         let arr = []
         this.searchedCardList.forEach(element => {
           if(element.quality == this.searchQuery.quality){
+            arr.push(element)
+          }
+        });
+        this.searchedCardList = [...arr]
+      }
+      if(this.searchQuery.category){ // 当选择卡牌类别
+        let arr = []
+        this.searchedCardList.forEach(element => {
+          if(element.category == this.searchQuery.category){
             arr.push(element)
           }
         });
