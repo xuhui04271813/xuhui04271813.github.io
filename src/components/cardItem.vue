@@ -39,18 +39,19 @@ export default {
 <style scoped>
   .card-item {
     text-align: center;
-    height: 300px;
+    height: 340px;
     width: 200px;
     border-radius: 9px;
     box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
     margin: 10px;
   }
-  .bg1 { background-color: #E6A23C; }
-  .bg2 { background-color: #67C23A; }
-  .bg3 { background-color: #409EFF; }
-  .bg4 { background-color: #F56C6C; }
-  .bg5 { background-color: #909399; }
+  .bg1 { background-color: #e09612; }
+  .bg2 { background-color: #40ab27; }
+  .bg3 { background-color: #27abe5; }
+  .bg4 { background-color: #ec3455; }
+  .bg5 { background-color: #5c23e2; }
   .header-box {
+    color: white;
     display: flex;
     align-items: center;
     height: 30px;
@@ -60,20 +61,20 @@ export default {
   .cost {
     width: 18px;
     height: 18px;
-    border: 1px solid #606266;
+    border: 1px solid white;
     border-radius: 9px;
     margin-right: 10px;
   }
   .body-box{
-    height: 180px;
+    height: 200px;
     width: 200px;
   }
   .img{
-    height: 180px;
+    height: 200px;
     width: 200px;
   }
   .effect{
-    height: 56px;
+    height: 76px;
     border-top: 2px solid #606266;
     padding: 5px 10px;
     font-size: 12px;

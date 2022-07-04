@@ -107,7 +107,7 @@ export default {
         });
         this.searchedCardList = [...arr]
       }
-      if(this.searchQuery.cost){ // 当选择卡牌费用时
+      if(this.searchQuery.cost || this.searchQuery.cost === 0){ // 当选择卡牌费用时
         let arr = []
         this.searchedCardList.forEach(element => {
           if(element.cost == this.searchQuery.cost){
