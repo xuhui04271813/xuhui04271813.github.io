@@ -3054,7 +3054,7 @@ const CardList = [
         effect: '复制己方场上和手牌中的所有纪念卡到己方手牌',
         attack: '',
         health: '',
-        quality: '凡',
+        quality: '天',
         category: '法术',
     },
     {
