@@ -3055,7 +3055,7 @@ const CardList = [
         attack: '',
         health: '',
         quality: '天',
-        category: '法术',
+        category: '连锁法术',
     },
     {
         name: '宝莲灯',
