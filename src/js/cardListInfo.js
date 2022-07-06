@@ -719,7 +719,7 @@ const CardList = [
         attr: 2,
         cost: 1,
         imgUrl: require('../assets/cardImg/tanhuayixian.png'),
-        effect: '敌方打出3费卡牌时，若己方生灵数>=敌方时触发：消灭该卡牌',
+        effect: '敌方打出4费卡牌时，若己方生灵数>=敌方时触发：消灭该卡牌',
         attack: '',
         health: '',
         quality: '天',
