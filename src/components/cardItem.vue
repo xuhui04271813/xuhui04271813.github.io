@@ -79,6 +79,9 @@ export default {
     padding: 5px 10px;
     font-size: 12px;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .number-box{
     display: flex;
@@ -92,7 +95,8 @@ export default {
     line-height: 18px;
     width: 18px;
     height: 18px;
-    border: 1px solid #606266;
+    border: 1px solid white;
+    color: white;
     border-radius: 9px;
   }
   .category{
