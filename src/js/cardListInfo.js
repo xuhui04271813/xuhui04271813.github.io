@@ -1650,7 +1650,7 @@ const CardList = [
         category: '生灵装备',
     },
     {
-        name: '火焰杯•稀',
+        name: '火焰杯·稀',
         attr: 4,
         cost: 1,
         imgUrl: require('../assets/cardImg/huoyanbei.png'),
@@ -3190,7 +3190,7 @@ const CardList = [
         category: '散仙',
     },
     {
-        name: '哪吒',
+        name: '哪吒·稀',
         attr: 3,
         cost: 2,
         imgUrl: require('../assets/cardImg/neza.png'),
